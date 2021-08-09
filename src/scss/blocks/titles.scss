@@ -1,0 +1,24 @@
+.title {
+  position: relative;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+}
+
+.title::before {
+  content: attr(data-number);
+  font-size: 0.7em;
+  color: #64ffda;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  top: 55%;
+  left: 0;
+  transform: translateX(15%);
+  display: block;
+  width: 50%;
+  height: 1px;
+  background-color: #fff;
+}
