@@ -1,0 +1,34 @@
+body {
+  font-family: sans-serif;
+  background-color: #0a192f;
+}
+
+.title {
+  position: relative;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.title::before {
+  content: attr(data-number);
+  font-size: 0.7em;
+  color: #64ffda;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 0;
+  -webkit-transform: translateX(15%);
+          transform: translateX(15%);
+  display: block;
+  width: 50%;
+  height: 1px;
+  background-color: #fff;
+}
