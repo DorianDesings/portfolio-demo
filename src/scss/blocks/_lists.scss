@@ -1,0 +1,28 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  column-gap: 10px;
+  margin: 20px 0 0;
+  padding-left: 0;
+  overflow: hidden;
+  list-style: none;
+  color: var(--green);
+  font-family: var(--font-mono);
+}
+
+.list__item {
+  position: relative;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  color: var(--slate);
+}
+
+.list__item::before {
+  content: '▹';
+  position: absolute;
+  left: -20px;
+  color: var(--green);
+  font-size: var(--fz-sm);
+  line-height: 12px;
+}
