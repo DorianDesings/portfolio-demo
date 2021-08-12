@@ -14,6 +14,7 @@
   height: 2px;
   background-color: #fff;
   z-index: -1;
+  transition: background-color 0.3s;
 }
 
 .toggle__bar::before,
@@ -25,59 +26,23 @@
   height: 2px;
   background-color: #fff;
   transform-origin: center;
+  transition: transform 0.3s;
 }
 
 .toggle__bar::before {
   transform: translate(0, -10px) scaleX(1.2);
-  // background-color: red;
 }
 
 .toggle__bar::after {
   transform: translate(4px, 10px) scaleX(0.8);
-  // background-color: lime;
 }
 
-.toggle--hide .toggle__bar {
-  animation: toggle-parent-hide 0.3s ease-in forwards;
+.toggle__bar.active {
+  background-color: transparent;
 }
-
-.toggle--hide .toggle__bar::before {
-  animation: toggle-before-hide 0.3s ease-in forwards;
+.toggle__bar.active::before {
+  transform: translateY(0) rotate(-45deg) scaleX(1);
 }
-
-.toggle--hide .toggle__bar::after {
-  animation: toggle-after-hide 0.3s ease-in forwards;
-}
-
-@keyframes toggle-parent-hide {
-  40% {
-    background-color: #fff;
-  }
-
-  100% {
-    background-color: #0a192f;
-  }
-}
-
-@keyframes toggle-before-hide {
-  50% {
-    transform: translateY(0) scaleX(1.2);
-  }
-
-  100% {
-    transform: translate(1px, -1px) scaleX(1.2) rotate(-45deg);
-  }
-}
-
-@keyframes toggle-after-hide {
-  0% {
-    transform: translateY(0) scaleX(0.8);
-  }
-  50% {
-    transform: translateY(0) scaleX(1.2);
-  }
-
-  100% {
-    transform: translate(1px, -1px) scaleX(1.2) rotate(45deg);
-  }
+.toggle__bar.active::after {
+  transform: translateY(0) rotate(45deg) scaleX(1);
 }

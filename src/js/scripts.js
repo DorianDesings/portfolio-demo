@@ -1,9 +1,6 @@
 const toggleMenu = document.getElementById('toggle-menu');
+const toggleBar = document.getElementById('toggle-bar');
 
-toggleMenu.addEventListener('click', e => {
-  if (e.target.classList.contains('toggle--show')) {
-    e.target.classList.add('toggle--close');
-  } else {
-    e.target.classList.add('toggle--show');
-  }
+toggleMenu.addEventListener('click', () => {
+  toggleBar.classList.toggle('active');
 });

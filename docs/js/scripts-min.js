@@ -1,1 +1,1 @@
-const toggleMenu=document.getElementById("toggle-menu");toggleMenu.addEventListener("click",(t=>{t.target.classList.contains("toggle--show")?t.target.classList.add("toggle--close"):t.target.classList.add("toggle--show")}));
+const toggleMenu=document.getElementById("toggle-menu"),toggleBar=document.getElementById("toggle-bar");toggleMenu.addEventListener("click",(()=>{toggleBar.classList.toggle("active")}));
