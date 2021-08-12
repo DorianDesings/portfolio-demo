@@ -2,14 +2,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 75px;
-  height: 75px;
+  width: 50px;
+  height: 50px;
+  padding: 0.8em;
   background-color: transparent;
 }
 
 .toggle__bar {
   position: relative;
-  width: 40%;
+  width: 100%;
   height: 2px;
   background-color: #fff;
   z-index: -1;
@@ -19,81 +20,64 @@
 .toggle__bar::after {
   content: '';
   position: absolute;
-  right: 0;
-  width: 110%;
+  right: 2px;
+  width: 100%;
   height: 2px;
-  background-color: inherit;
-  transition: transform 0.3s;
+  background-color: #fff;
+  transform-origin: center;
 }
 
 .toggle__bar::before {
-  transform: translateY(-10px);
+  transform: translate(0, -10px) scaleX(1.2);
+  // background-color: red;
 }
 
 .toggle__bar::after {
-  transform: translateY(10px);
-  width: 80%;
+  transform: translate(4px, 10px) scaleX(0.8);
+  // background-color: lime;
 }
 
-.toggle--show .toggle__bar {
-  animation: toggle-parent 0.5s ease-in forwards;
+.toggle--hide .toggle__bar {
+  animation: toggle-parent-hide 0.3s ease-in forwards;
 }
 
-.toggle--show .toggle__bar::after {
-  animation: toggle-after 0.5s ease-in forwards;
+.toggle--hide .toggle__bar::before {
+  animation: toggle-before-hide 0.3s ease-in forwards;
 }
 
-.toggle--show .toggle__bar::before {
-  animation: toggle-before 0.5s ease-in forwards;
+.toggle--hide .toggle__bar::after {
+  animation: toggle-after-hide 0.3s ease-in forwards;
 }
 
-.toggle--close .toggle__bar {
-  animation: toggle-parent 0.5s ease-in forwards reverse;
-}
-
-.toggle--close .toggle__bar::after {
-  animation: toggle-after 0.5s ease-in forwards reverse;
-}
-
-.toggle--close .toggle__bar::before {
-  animation: toggle-before 0.5s ease-in forwards reverse;
-}
-
-@keyframes toggle-parent {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(0);
+@keyframes toggle-parent-hide {
+  40% {
+    background-color: #fff;
   }
 
   100% {
-    transform: translateY(0) rotate(-45deg);
+    background-color: #0a192f;
   }
 }
 
-@keyframes toggle-after {
-  0% {
-    transform: translateY(10px);
-  }
+@keyframes toggle-before-hide {
   50% {
-    transform: translateY(0);
+    transform: translateY(0) scaleX(1.2);
   }
 
   100% {
-    transform: translateY(0) rotate(0deg);
+    transform: translate(1px, -1px) scaleX(1.2) rotate(-45deg);
   }
 }
 
-@keyframes toggle-before {
+@keyframes toggle-after-hide {
   0% {
-    transform: translateY(-10px);
+    transform: translateY(0) scaleX(0.8);
   }
   50% {
-    transform: translateY(0);
+    transform: translateY(0) scaleX(1.2);
   }
 
   100% {
-    transform: translate(1px, 1px) rotate(-90deg);
+    transform: translate(1px, -1px) scaleX(1.2) rotate(45deg);
   }
 }
