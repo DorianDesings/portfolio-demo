@@ -206,14 +206,22 @@ body {
   width: 75px;
   height: 75px;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .toggle__bar {
   position: relative;
   width: 40%;
+  z-index: -1;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.toggle__bar,
+.toggle__bar::before,
+.toggle__bar::after {
   height: 2px;
   background-color: #fff;
-  z-index: -1;
 }
 
 .toggle__bar::before,
@@ -221,9 +229,6 @@ body {
   content: "";
   position: absolute;
   right: 0;
-  width: 110%;
-  height: 2px;
-  background-color: inherit;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
@@ -233,123 +238,29 @@ body {
 .toggle__bar::before {
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
+  -webkit-transform-origin: 17px -1px;
+          transform-origin: 17px -1px;
+  width: 110%;
 }
 
 .toggle__bar::after {
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
+  -webkit-transform-origin: 10px -3px;
+          transform-origin: 10px -3px;
   width: 80%;
 }
 
-.toggle--show .toggle__bar {
-  -webkit-animation: toggle-parent 0.5s ease-in forwards;
-          animation: toggle-parent 0.5s ease-in forwards;
+.active.toggle__bar {
+  background-color: transparent;
 }
 
-.toggle--show .toggle__bar::after {
-  -webkit-animation: toggle-after 0.5s ease-in forwards;
-          animation: toggle-after 0.5s ease-in forwards;
+.active.toggle__bar::before {
+  -webkit-transform: translateY(0) rotate(-45deg) scaleX(0.91);
+          transform: translateY(0) rotate(-45deg) scaleX(0.91);
 }
 
-.toggle--show .toggle__bar::before {
-  -webkit-animation: toggle-before 0.5s ease-in forwards;
-          animation: toggle-before 0.5s ease-in forwards;
-}
-
-.toggle--close .toggle__bar {
-  animation: toggle-parent 0.5s ease-in forwards reverse;
-}
-
-.toggle--close .toggle__bar::after {
-  animation: toggle-after 0.5s ease-in forwards reverse;
-}
-
-.toggle--close .toggle__bar::before {
-  animation: toggle-before 0.5s ease-in forwards reverse;
-}
-
-@-webkit-keyframes toggle-parent {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  50% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(0) rotate(-45deg);
-            transform: translateY(0) rotate(-45deg);
-  }
-}
-
-@keyframes toggle-parent {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  50% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(0) rotate(-45deg);
-            transform: translateY(0) rotate(-45deg);
-  }
-}
-@-webkit-keyframes toggle-after {
-  0% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-  }
-  50% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(0) rotate(0deg);
-            transform: translateY(0) rotate(0deg);
-  }
-}
-@keyframes toggle-after {
-  0% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-  }
-  50% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(0) rotate(0deg);
-            transform: translateY(0) rotate(0deg);
-  }
-}
-@-webkit-keyframes toggle-before {
-  0% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-  }
-  50% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translate(1px, 1px) rotate(-90deg);
-            transform: translate(1px, 1px) rotate(-90deg);
-  }
-}
-@keyframes toggle-before {
-  0% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-  }
-  50% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translate(1px, 1px) rotate(-90deg);
-            transform: translate(1px, 1px) rotate(-90deg);
-  }
+.active.toggle__bar::after {
+  -webkit-transform: translateY(0) rotate(45deg) scaleX(1.25);
+          transform: translateY(0) rotate(45deg) scaleX(1.25);
 }

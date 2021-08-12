@@ -1,3 +1,11 @@
 {
-  "workbench.colorTheme": "Electron Highlighter"
+  // No lo tengo instalado XD
+  // "workbench.colorTheme": "Electron Highlighter",
+  "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "./docs/css/"
+        }
+    ],
 }
