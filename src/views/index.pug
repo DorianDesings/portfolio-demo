@@ -6,9 +6,25 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet" href="css/styles.css")
     title Potfolio
-  body 
-    header.header
-      img(src="./assets/images/logo.png" alt="logo").logo
+  body
+    .top-bar
+      img(src="assets/images/logo.png" alt="logo").logo
       #toggle-menu.toggle
         #toggle-bar.toggle__bar
+    nav#main-nav.main-nav 
+      ul.main-menu
+        li.main-menu__item
+          a(href="#" data-number="01.").main-menu__link About
+        li.main-menu__item
+          a(href="#" data-number="02.").main-menu__link Experience
+        li.main-menu__item
+          a(href="#" data-number="03.").main-menu__link Work
+        li.main-menu__item
+          a(href="#" data-number="04.").main-menu__link Contact
+    header#header.header
+      .banner
+        p.text-green Hi, my name is
+        h1.main-title DorianDesings
+        p.main-subtitle I build things for the web
+        p.text I'm a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products at
     script(src="js/scripts-min.js")

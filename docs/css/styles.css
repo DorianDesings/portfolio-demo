@@ -29,6 +29,9 @@ body {
   font-family: sans-serif;
   background-color: #0a192f;
   margin: 0;
+  max-width: 100vw;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .title {
@@ -183,6 +186,21 @@ body {
 }
 
 .header {
+  color: var(--slate);
+  padding: 2em;
+  position: relative;
+  -webkit-transition: -webkit-filter 0.3s;
+  transition: -webkit-filter 0.3s;
+  transition: filter 0.3s;
+  transition: filter 0.3s, -webkit-filter 0.3s;
+}
+
+.header--blur {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
+.top-bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -192,10 +210,16 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0.5em 0;
 }
 
 .logo {
   max-width: 15%;
+}
+
+.banner {
+  position: relative;
+  z-index: -100;
 }
 
 .toggle {
@@ -262,4 +286,63 @@ body {
 .toggle__bar.active::after {
   -webkit-transform: translateY(0) rotate(45deg) scaleX(1);
           transform: translateY(0) rotate(45deg) scaleX(1);
+}
+
+.main-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  min-height: 100vh;
+  z-index: -10;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  transition: -webkit-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+}
+
+.main-nav--show {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.main-menu {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--light-navy);
+}
+
+.main-menu__item {
+  color: var(--slate);
+  line-height: 3;
+  -webkit-transform: translate(100px, -100px);
+          transform: translate(100px, -100px);
+}
+
+.main-menu__link {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-menu__link::before {
+  content: attr(data-number);
+  color: var(--green);
+  margin-right: 5px;
 }

@@ -1,1 +1,1 @@
-const toggleMenu=document.getElementById("toggle-menu"),toggleBar=document.getElementById("toggle-bar");toggleMenu.addEventListener("click",(()=>{toggleBar.classList.toggle("active")}));
+const mainNav=document.getElementById("main-nav"),toggleMenu=document.getElementById("toggle-menu"),toggleBar=document.getElementById("toggle-bar"),headerElement=document.getElementById("header");toggleMenu.addEventListener("click",(()=>{toggleBar.classList.toggle("active"),mainNav.classList.toggle("main-nav--show"),header.classList.toggle("header--blur")}));

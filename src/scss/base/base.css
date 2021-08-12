@@ -1,0 +1,11 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #0a192f;
+  margin: 0;
+}
+/*# sourceMappingURL=base.css.map */

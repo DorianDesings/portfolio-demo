@@ -7,10 +7,26 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Potfolio</title>
   </head>
-  <body> 
-    <header class="header"><img class="logo" src="./assets/images/logo.png" alt="logo">
+  <body>
+    <div class="top-bar"><img class="logo" src="assets/images/logo.png" alt="logo">
       <div class="toggle" id="toggle-menu">
         <div class="toggle__bar" id="toggle-bar"></div>
+      </div>
+    </div>
+    <nav class="main-nav" id="main-nav"> 
+      <ul class="main-menu">
+        <li class="main-menu__item"><a class="main-menu__link" href="#" data-number="01.">About</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="#" data-number="02.">Experience</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="#" data-number="03.">Work</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="#" data-number="04.">Contact</a></li>
+      </ul>
+    </nav>
+    <header class="header" id="header">
+      <div class="banner">
+        <p class="text-green">Hi, my name is</p>
+        <h1 class="main-title">DorianDesings</h1>
+        <p class="main-subtitle">I build things for the web</p>
+        <p class="text">I'm a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products at</p>
       </div>
     </header>
     <script src="js/scripts-min.js"></script>
