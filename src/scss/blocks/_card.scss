@@ -1,8 +1,8 @@
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  // grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  width: 50%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }

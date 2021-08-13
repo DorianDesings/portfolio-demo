@@ -8,11 +8,6 @@
     <title>Potfolio</title>
   </head>
   <body>
-    <div class="top-bar"><img class="logo" src="assets/images/logo.png" alt="logo">
-      <div class="toggle" id="toggle-menu">
-        <div class="toggle__bar" id="toggle-bar"></div>
-      </div>
-    </div>
     <nav class="main-nav" id="main-nav"> 
       <ul class="main-menu">
         <li class="main-menu__item"><a class="main-menu__link" href="#" data-number="01.">About</a></li>
@@ -21,14 +16,93 @@
         <li class="main-menu__item"><a class="main-menu__link" href="#" data-number="04.">Contact</a></li>
       </ul>
     </nav>
+    <div class="top-bar"><img class="logo" src="assets/images/logo.png" alt="logo">
+      <div class="toggle" id="toggle-menu">
+        <div class="toggle__bar" id="toggle-bar"></div>
+      </div>
+    </div>
     <header class="header" id="header">
       <div class="banner">
         <p class="text-green">Hi, my name is</p>
-        <h1 class="main-title">DorianDesings</h1>
-        <p class="main-subtitle">I build things for the web</p>
+        <h1 class="text-lightest">DorianDesings</h1>
+        <p class="big-heading">I build things for the web</p>
         <p class="text">I'm a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products at</p>
       </div>
     </header>
+    <main id="main">
+      <div class="title-container"> 
+        <h2 class="title" data-number="01.">About me</h2>
+      </div>
+      <article class="article">
+        <p class="text">Hello! My name is Dorian and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!</p>
+        <ul class="list"> 
+          <li class="list__item">JavaScript (ES6+)</li>
+          <li class="list__item">React</li>
+          <li class="list__item">Eleventy</li>
+          <li class="list__item">Vue</li>
+          <li class="list__item">Node.js</li>
+          <li class="list__item">WordPress</li>
+        </ul>
+        <section>
+          <div class="title-container"> 
+            <h2 class="title" data-number="02.">Works</h2>
+          </div>
+        </section>
+        <section class="cards">
+          <article class="card">
+            <header class="card__header">
+              <div class="card__icon"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg></div><a class="card__link" href="#"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><title>External Link</title><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+            </header>
+            <div class="card__body">
+              <h3 class="card__title">Integrating Algolia Search with WordPress Multisite</h3>
+              <p class="card__text">Building a custom multisite compatible WordPress plugin to build global search with Algolia</p>
+            </div>
+            <footer class="card__footer">
+              <ul class="tags">
+                <li class="tags__item">React</li>
+                <li class="tags__item">Node.js</li>
+                <li class="tags__item">Node.Express</li>
+                <li class="tags__item">Spotify Api</li>
+              </ul>
+            </footer>
+          </article>
+          <article class="card">
+            <header class="card__header">
+              <div class="card__icon"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg></div><a class="card__link" href="#"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><title>External Link</title><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+            </header>
+            <div class="card__body">
+              <h3 class="card__title">Integrating Algolia Search with WordPress Multisite</h3>
+              <p class="card__text">Building a custom multisite compatible WordPress plugin to build global search with Algolia</p>
+            </div>
+            <footer class="card__footer">
+              <ul class="tags">
+                <li class="tags__item">React</li>
+                <li class="tags__item">Node.js</li>
+                <li class="tags__item">Node.Express</li>
+                <li class="tags__item">Spotify Api</li>
+              </ul>
+            </footer>
+          </article>
+          <article class="card">
+            <header class="card__header">
+              <div class="card__icon"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg></div><a class="card__link" href="#"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><title>External Link</title><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+            </header>
+            <div class="card__body">
+              <h3 class="card__title">Integrating Algolia Search with WordPress Multisite</h3>
+              <p class="card__text">Building a custom multisite compatible WordPress plugin to build global search with Algolia</p>
+            </div>
+            <footer class="card__footer">
+              <ul class="tags">
+                <li class="tags__item">React</li>
+                <li class="tags__item">Node.js</li>
+                <li class="tags__item">Node.Express</li>
+                <li class="tags__item">Spotify Api</li>
+              </ul>
+            </footer>
+          </article>
+        </section>
+      </article>
+    </main>
     <script src="js/scripts-min.js"></script>
   </body>
 </html>

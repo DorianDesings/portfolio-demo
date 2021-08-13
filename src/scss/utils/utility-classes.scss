@@ -1,0 +1,29 @@
+.blur {
+  filter: blur(5px);
+}
+
+.text-green {
+  color: var(--green);
+}
+
+.text-lightest {
+  color: var(--lightest-slate);
+}
+
+.big-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.3em 0;
+}
+
+.text {
+  color: var(--slate);
+}
+
+.article {
+  margin-bottom: 3em;
+}
+
+.no-scroll {
+  overflow: hidden;
+}

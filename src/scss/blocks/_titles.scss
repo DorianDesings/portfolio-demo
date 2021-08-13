@@ -1,9 +1,10 @@
 .title {
-  color: #fff;
+  position: relative;
   display: grid;
   grid-template-columns: auto auto 1fr;
   align-items: center;
-  position: relative;
+  margin: 1em 0;
+  color: #fff;
 }
 
 .title::before {
@@ -11,6 +12,8 @@
   font-size: 0.7em;
   color: #64ffda;
   align-self: end;
+  margin-right: 0.5em;
+  margin-bottom: 0.1em;
 }
 
 .title::after {
