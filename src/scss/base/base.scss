@@ -6,7 +6,14 @@ body {
   font-family: sans-serif;
   background-color: #0a192f;
   margin: 0;
+  padding-top: 50px;
   font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding-top: 100px;
+  }
 }
 
 h1,
@@ -16,4 +23,13 @@ h2 {
 
 main {
   padding: 1.5em;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+  }
 }

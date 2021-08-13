@@ -1,10 +1,15 @@
 .cards {
   display: grid;
-  // grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .card {
